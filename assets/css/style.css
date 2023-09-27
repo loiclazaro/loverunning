@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/*General Syles*/
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*Generic project syles*/
+    color:#3a3a3a;
+}
+
 /*Header*/
 header {
     background-color:lightcoral;
@@ -13,6 +22,8 @@ header {
 /*Main*/
 main {
     background-color:lightblue;
+    flex: 1 0 auto;
+    /*Make main element take up any surplus space to push the footer down*/
 }
 
 /*Footer*/
