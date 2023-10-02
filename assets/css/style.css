@@ -1,7 +1,6 @@
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
 /*Asterisck wildcard selector to overide default styles added by the browser*/
 * {
     padding: 0;
@@ -27,11 +26,14 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-header a { 
-text-decoration:none;
-color: inherit;
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -40,14 +42,14 @@ h1 {
     letter-spacing: 2px;
     color: #252525;
 }
- 
-#menu{
-    font-size:110%;
-    letter-spacing:4px;
-    list-style-type:none;
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -58,17 +60,30 @@ h1 {
 /* navbar styles with dropdown toggle */
 
 nav {
-    position:absolute;
+    position: absolute;
     background-color: #ffffff;
     width: 100%;
-    left:0;
+    left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:none;
+    display: none;
+    top: 100%;
 }
 
+/* nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
 
-/*Main*/
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle-label {
+    font-size: 2rem;
+}
+
+/*Main Content*/
 main {
     background-color: lightblue;
     flex: 1 0 auto;
